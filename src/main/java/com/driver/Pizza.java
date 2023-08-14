@@ -32,12 +32,14 @@ public class Pizza {
         this.extraPaperBagPrice=20;
         // your code goes here
         if(isVeg==true){
-            basePrice+=300;
+            this.basePrice=300;
+            this.extraToppingsPrice=70;
         }
         else{
-            basePrice+=400;;
+            this.basePrice=400;
+            this.extraToppingsPrice=80;
         }
-        this.price= basePrice;
+        this.price= this.basePrice;
     }
 
     public int getPrice(){
@@ -52,7 +54,7 @@ public class Pizza {
 
     public void addExtraToppings(){
         // your code goes here
-        if(!toppingsAdded)price+= isVeg?70:120;
+        if(!toppingsAdded)price+=extraToppingsPrice;
         this.toppingsAdded=true;
     }
 
@@ -73,7 +75,7 @@ public class Pizza {
                 else bill+="Extra Toppings Added: 120\n";
             }
             if(paperBag) bill+="Paperbag Added: 20\n";
-            bill+="Total Price: "+this.price;
+            bill+="Total Price: "+this.price+"\n";
             isBillGiven=true;
         }
         return this.bill;
