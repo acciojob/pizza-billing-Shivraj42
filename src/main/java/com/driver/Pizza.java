@@ -37,7 +37,7 @@ public class Pizza {
         }
         else{
             this.basePrice=400;
-            this.extraToppingsPrice=80;
+            this.extraToppingsPrice=120;
         }
         this.price= this.basePrice;
     }
